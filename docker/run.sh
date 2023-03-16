@@ -160,6 +160,10 @@ do
 	fi
 done
 
+if [ -a "/dev/snd" ]; then
+	V4L2_DEVICES="$V4L2_DEVICES --device /dev/snd "
+fi
+
 echo "V4L2_DEVICES:  $V4L2_DEVICES"
 
 # run the container
